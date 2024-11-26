@@ -1,9 +1,9 @@
 <?php
 
-namespace Hoangdv\NovaBreadcrumb;
+namespace Bocanhcam\NovaBreadcrumb;
 
-use Hoangdv\NovaBreadcrumb\Console\Commands\ReplaceBreadcrumbsComponent;
-use Hoangdv\NovaBreadcrumb\Http\Middleware\BreadcrumbReplacement;
+use Bocanhcam\NovaBreadcrumb\Console\Commands\ReplaceBreadcrumbsComponent;
+use Bocanhcam\NovaBreadcrumb\Http\Middleware\BreadcrumbReplacement;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Nova;

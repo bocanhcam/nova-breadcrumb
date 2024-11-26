@@ -1,6 +1,6 @@
 <?php
 
-namespace Hoangdv\NovaBreadcrumb;
+namespace Bocanhcam\NovaBreadcrumb;
 
 use Laravel\Nova\Makeable;
 

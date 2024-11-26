@@ -6,7 +6,7 @@ This package provides an easy way to define and manage breadcrumbs for Laravel N
 Install the package via Composer:
 
 ```shell
-composer require hoangdv/nova-breadcrumb
+composer require bocanhcam/nova-breadcrumb
 ```
 After installation, run the following command:
 
@@ -19,11 +19,11 @@ Define Breadcrumbs in Your Nova Resources
 To define breadcrumbs for a Nova resource, implement the following functions in your resource class `(App\Nova\YourResource)`:
 
 ```php
-use Hoangdv\NovaBreadcrumb\Breadcrumb;
-use Hoangdv\NovaBreadcrumb\Breadcrumbs;
-use Hoangdv\NovaBreadcrumb\HTML;
-use Hoangdv\NovaBreadcrumb\Icon;
-use Laravel\Nova\Http\Requests\NovaRequest;
+use Bocanhcam\NovaBreadcrumb\Breadcrumb;
+use Bocanhcam\NovaBreadcrumb\Breadcrumbs;
+use Bocanhcam\NovaBreadcrumb\HTML;
+use Bocanhcam\NovaBreadcrumb\Icon;
+use Bocanhcam\Nova\Http\Requests\NovaRequest;
 
 class YourResource extends Resource
 {

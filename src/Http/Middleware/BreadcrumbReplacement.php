@@ -1,6 +1,6 @@
 <?php
 
-namespace Hoangdv\NovaBreadcrumb\Http\Middleware;
+namespace Bocanhcam\NovaBreadcrumb\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;

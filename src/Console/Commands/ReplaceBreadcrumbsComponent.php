@@ -1,6 +1,6 @@
 <?php
 
-namespace Hoangdv\NovaBreadcrumb\Console\Commands;
+namespace Bocanhcam\NovaBreadcrumb\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Filesystem\Filesystem;

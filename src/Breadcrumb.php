@@ -1,6 +1,6 @@
 <?php
 
-namespace Hoangdv\NovaBreadcrumb;
+namespace Bocanhcam\NovaBreadcrumb;
 
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Menu\Breadcrumb as NovaBreadcrumb;

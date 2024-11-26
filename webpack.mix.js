@@ -11,4 +11,4 @@ mix
   .alias({
     '@': path.join(__dirname, 'resources/js/'),
   })
-  .nova('hoangdv/nova-breadcrumb')
+  .nova('bocanhcam/nova-breadcrumb')

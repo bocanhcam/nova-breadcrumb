@@ -1,5 +1,5 @@
 {
-    "name": "hoangdv/nova-breadcrumb",
+    "name": "bocanhcam/nova-breadcrumb",
     "description": "A Laravel Nova asset.",
     "keywords": [
         "laravel",
@@ -11,13 +11,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Hoangdv\\NovaBreadcrumb\\": "src/"
+            "Bocanhcam\\NovaBreadcrumb\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-              "BreadcrumbServiceProvider"
+              "Bocanhcam\\NovaBreadcrumb\\BreadcrumbServiceProvider"
             ]
         }
     },
