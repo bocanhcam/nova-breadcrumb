@@ -2,6 +2,10 @@
 
 This package provides an easy way to define and manage breadcrumbs for Laravel Nova resources. By implementing simple functions within your Nova resources, you can customize the breadcrumbs for various resource actions like `Index`, `Detail`, `Create`, `Update`, and more.
 
+![Breadcrumbs with icon](/screenshots/icon.png)
+
+![Breadcrumbs with html](/screenshots/html.png)
+
 ## Installation
 Install the package via Composer:
 
