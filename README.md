@@ -14,7 +14,28 @@ After installation, run the following command:
 php artisan nova:breadcrumbs
 ```
 
+This command publishes the necessary configuration and setup files for the breadcrumbs functionality like `Icon` and `HTML`.
+
 ## Usage
+
+First you need to invoke the `Nova::withBreadcrumbs` method. This method should be invoked from within the boot method of your application's `App\Providers\NovaServiceProvider` class:
+
+```php
+use Laravel\Nova\Nova;
+
+/**
+ * Boot any application services.
+ *
+ * @return void
+ */
+public function boot()
+{
+    parent::boot();
+
+    Nova::withBreadcrumbs();
+}
+```
+
 Define Breadcrumbs in Your Nova Resources
 To define breadcrumbs for a Nova resource, implement the following functions in your resource class `(App\Nova\YourResource)`:
 

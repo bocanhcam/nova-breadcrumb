@@ -69,6 +69,8 @@ class ReplaceBreadcrumbsComponent extends Command
             $this->novaStorage->put('webpack.mix.js', $content);
         }
 
+        Process::run('cd '. $this->novaPath. ' && npm install');
+
         Process::run('cd '. $this->novaPath. ' && npm run production');
 
         $this->call('vendor:publish', [
