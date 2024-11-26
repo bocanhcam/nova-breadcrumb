@@ -1,9 +1,11 @@
 {
     "name": "bocanhcam/nova-breadcrumb",
-    "description": "A Laravel Nova asset.",
+    "description": "A Laravel Nova package provides an easy way to define and manage breadcrumbs.",
     "keywords": [
         "laravel",
-        "nova"
+        "nova",
+        "breadcrumbs",
+        "breadcrumb"
     ],
     "license": "MIT",
     "require": {
