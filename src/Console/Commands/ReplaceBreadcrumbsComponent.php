@@ -55,6 +55,8 @@ class ReplaceBreadcrumbsComponent extends Command
      */
     public function replaceBreadcrumbsComponent(): void
     {
+        $this->info('Starting the installation and build process. This may take a few minutes.');
+
         $this->novaStorage->put(
             'resources/js/components/Menu/Breadcrumbs.vue',
             file_get_contents(__DIR__ . '/../../../resources/js/components/Menu/Breadcrumbs.vue'));
@@ -69,9 +71,19 @@ class ReplaceBreadcrumbsComponent extends Command
             $this->novaStorage->put('webpack.mix.js', $content);
         }
 
-        Process::run('cd '. $this->novaPath. ' && npm install');
+        $this->info('Running "npm install" to fetch dependencies. Please wait...');
+        $install = Process::run('cd '. $this->novaPath. ' && npm install');
+        if ($install->failed()) {
+            $this->error($install->errorOutput());
+            return;
+        }
 
-        Process::run('cd '. $this->novaPath. ' && npm run production');
+        $this->info('Running "npm run production" to build the production assets. Please wait...');
+        $build = Process::run('cd '. $this->novaPath. ' && npm run production');
+        if ($build->failed()) {
+            $this->error($build->errorOutput());
+            return;
+        }
 
         $this->call('vendor:publish', [
             '--tag' => 'nova-assets',
