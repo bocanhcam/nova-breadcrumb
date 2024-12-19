@@ -56,7 +56,7 @@ class BreadcrumbReplacement extends Middleware
             }else{
                 $resourceClass = Nova::resourceForKey($request->resource);
 
-                $resource = new $resourceClass();
+                $resource = !empty($resourceClass) ? new $resourceClass() : null;
             }
 
             $method = 'breadcrumbsFor'.ucfirst($pageType);
@@ -85,7 +85,7 @@ class BreadcrumbReplacement extends Middleware
             return false;
         }
 
-        return ((new ReflectionClass($controller))?->getNamespaceName() ?? false) === "Laravel\Nova\Http\Controllers\Pages";
+        return ((new ReflectionClass($controller))->getNamespaceName() ?? false) === "Laravel\Nova\Http\Controllers\Pages";
     }
 
     /**
