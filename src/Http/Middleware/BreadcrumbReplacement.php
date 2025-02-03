@@ -66,6 +66,10 @@ class BreadcrumbReplacement extends Middleware
                 $breadcrumbs = $resource->$method($request);
             }
 
+            if (empty($breadcrumbs)){
+                return $response;
+            }
+
             $responsePage['props'] ??= [];
             $responsePage['props']['breadcrumbs'] = $breadcrumbs;
 
